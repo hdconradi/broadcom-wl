@@ -1,6 +1,7 @@
 Set of patches for Broadcom wireless adapters
 
 Tested on OpenSuse 13.1 with kernel 3.11
+          SuSE Tumbleweed with kernel 4.0.x, 4.1.x
 
 Adapter: Broadcom Corporation BCM43142 802.11b/g/n (rev 01)
 Broadcom driver version: 6.30.223.141
@@ -15,6 +16,7 @@ patch -p0 < makefile.patch
 patch -p1 < wlan.patch
 patch -p1 < license.patch
 patch -p1 < linux-recent-2-copied-from-ubuntu.patch
+patch -p0 < gcc-4.9.patch
 
 make
 make install

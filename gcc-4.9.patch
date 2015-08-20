@@ -1,0 +1,10 @@
+--- Makefile	2015-08-09 16:35:05.767449473 +0200
++++ Makefile.new	2015-08-09 16:33:17.498636908 +0200
+@@ -125,6 +125,7 @@
+ EXTRA_CFLAGS       += -I$(src)/src/wl/sys -I$(src)/src/wl/phy -I$(src)/src/wl/ppr/include
+ EXTRA_CFLAGS       += -I$(src)/src/shared/bcmwifi/include
+ #EXTRA_CFLAGS       += -DBCMDBG_ASSERT
++EXTRA_CFLAGS       += -Wno-error=date-time
+ 
+ EXTRA_LDFLAGS      := $(src)/lib/wlc_hybrid.o_shipped
+ 
