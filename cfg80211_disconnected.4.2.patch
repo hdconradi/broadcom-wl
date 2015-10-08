@@ -1,0 +1,11 @@
+--- src/wl/sys/wl_cfg80211_hybrid.c	2015-10-08 23:46:25.983078488 +0200
++++ ../../hdconradi/broadcom-wl/src/wl/sys/wl_cfg80211_hybrid.c	2015-10-08 23:26:44.047839310 +0200
+@@ -1842,7 +1842,7 @@
+ 		}
+ 		else if ((event == WLC_E_LINK && ~(flags & WLC_EVENT_MSG_LINK)) ||
+ 			event == WLC_E_DEAUTH_IND || event == WLC_E_DISASSOC_IND) {
+-			cfg80211_disconnected(ndev, 0, NULL, 0, GFP_KERNEL);
++			cfg80211_disconnected(ndev, 0, NULL, 0, true, GFP_KERNEL);
+ 			clear_bit(WL_STATUS_CONNECTED, &wl->status);
+ 			wl_link_down(wl);
+ 			wl_init_prof(wl->profile);
